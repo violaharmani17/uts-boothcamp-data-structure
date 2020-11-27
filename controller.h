@@ -16,6 +16,14 @@ long DateNumber(int date, int month, int year){
 	return (long)(year*10000)+(month*100)+date;
 }
 
+void Data() {
+	int date, year;
+	char month[255], name[255];
+	scanf("%d %s %d - %[^\n]", &date, &month, &year, &name); 
+	getchar();
+	Push(date, month, year, name);
+}
+
 void popAll(){
 	while(head){
 		popHead();
